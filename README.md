@@ -1,4 +1,6 @@
 大学期间的小项目
+
+
 基于深度学习的鱼类图像分类模型，采用了多种经典的深度学习网络结构，包括AlexNet、VGG、GoogLeNet、ResNet、MobileNet和ShuffleNet等，对九种鱼类进行精确分类
 
 
