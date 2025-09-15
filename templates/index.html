@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>鱼类识别系统</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f8ff; }
+        h1 { color: #2e8b57; }
+        form { margin-top: 20px; }
+        input[type=file] { padding: 10px; }
+        input[type=submit] { padding: 10px 20px; background-color: #2e8b57; color: white; border: none; cursor: pointer; }
+        input[type=submit]:hover { background-color: #3cb371; }
+        .flash { color: red; }
+    </style>
+</head>
+<body>
+    <h1>鱼类识别系统</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flash">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">上传鱼类图片：</label><br>
+        <input type="file" name="file" id="file" accept="image/*" required><br><br>
+        <input type="submit" value="识别">
+    </form>
+</body>
+</html>
